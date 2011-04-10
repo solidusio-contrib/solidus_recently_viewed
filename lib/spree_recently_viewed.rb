@@ -1,7 +1,7 @@
 require 'spree_core'
 require 'spree_recently_viewed_hooks'
 
-module SpreeClaimOrder
+module SpreeRecentlyViewed
   class Engine < Rails::Engine
 
     config.autoload_paths += %W(#{config.root}/lib)
