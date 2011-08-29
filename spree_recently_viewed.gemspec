@@ -3,8 +3,9 @@ Gem::Specification.new do |s|
   s.name        = 'spree_recently_viewed'
   s.version     = '1.1'
   s.summary     = 'Adds recently viewed products to Spree'
-  #s.description = 'Add (optional) gem description here'
-  s.required_ruby_version = '>= 1.8.7'
+  s.authors     = ['Roman Smirnov', 'Brian Quinn']
+  s.email       = 'brian@railsdog.com'
+  s.required_rub_version = '>= 1.8.7'
 
   s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
   s.require_path = 'lib'
