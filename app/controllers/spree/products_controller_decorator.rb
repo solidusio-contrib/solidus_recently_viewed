@@ -1,4 +1,4 @@
-ProductsController.class_eval do
+Spree::ProductsController.class_eval do
   after_filter :recently_viewed, :only => :show
 
   def recently_viewed
