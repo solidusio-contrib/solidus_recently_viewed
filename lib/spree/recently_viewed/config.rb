@@ -13,7 +13,7 @@ module Spree
 
       class << self
         def instance
-          return nil unless ActiveRecord::Base.connection.tables.include?('configurations')
+          return nil unless ActiveRecord::Base.connection.tables.include?('spree_configurations')
           RecentlyViewedConfiguration.find_or_create_by_name("Default recently_viewed configuration")
         end
       end
