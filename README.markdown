@@ -17,5 +17,5 @@ And run bundler:
     bundle install
 
 
-NOTE: There's no migrations required for this extension. You're done,
+NOTE: No migrations are required for this extension. You're done,
 move along now.
