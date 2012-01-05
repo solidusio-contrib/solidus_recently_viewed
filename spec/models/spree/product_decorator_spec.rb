@@ -7,13 +7,13 @@ describe Spree::Product do
 
   describe "Spree::Product.find_by_array_of_ids" do
     it "should return the products specified in the array of product ids" do
-      product_ids = [1,2,3]
+      product_ids = Spree::Product.limit(2).map(&:id)
       products = Spree::Product.find_by_array_of_ids(product_ids)
-      products.size.should == 3
+      products.size.should == 2
     end
 
     it "should ignore nonexistant product ids and still return correctly specified products" do
-      product_ids = [1,2,200]
+      product_ids = Spree::Product.limit(2).map(&:id) << 200
       products = Spree::Product.find_by_array_of_ids(product_ids)
       products.size.should == 2
     end
