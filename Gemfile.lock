@@ -1,4 +1,16 @@
 GIT
+  remote: git://github.com/jnicklas/capybara.git
+  revision: 21977817bf6d87b4c9e04357197ceb384718d002
+  specs:
+    capybara (1.1.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 6011e69b74c711359772cc0b7c8ed35f3c7b8a6c
   specs:
@@ -82,14 +94,18 @@ GEM
     activesupport (3.1.3)
       multi_json (~> 1.0)
     acts_as_list (0.1.4)
+    addressable (2.2.6)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     braintree (2.13.2)
       builder (>= 2.0.0)
     builder (3.0.0)
     cancan (1.6.7)
+    childprocess (0.2.5)
+      ffi (~> 1.0.6)
     cocaine (0.2.1)
     coderay (0.9.8)
+    database_cleaner (0.7.0)
     deface (0.7.2)
       nokogiri (~> 1.5.0)
       rails (>= 3.0.9)
@@ -104,6 +120,7 @@ GEM
     faker (1.0.1)
       i18n (~> 0.4)
     ffaker (1.10.1)
+    ffi (1.0.11)
     highline (1.6.2)
     hike (1.2.1)
     i18n (0.6.0)
@@ -115,6 +132,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -191,6 +210,12 @@ GEM
       rspec (~> 2.8.0)
     ruby_parser (2.3.1)
       sexp_processor (~> 3.0)
+    rubyzip (0.9.5)
+    selenium-webdriver (2.16.0)
+      childprocess (>= 0.2.5)
+      ffi (~> 1.0.9)
+      multi_json (~> 1.0.4)
+      rubyzip
     sexp_processor (3.0.9)
     slop (2.1.0)
     sprockets (2.0.3)
@@ -208,13 +233,18 @@ GEM
     tzinfo (0.3.31)
     warden (1.0.6)
       rack (>= 1.0)
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara!
+  database_cleaner
   factory_girl
   faker
+  launchy
   pry
   rspec-rails (~> 2.8.0.rc1)
   spree!
