@@ -1,6 +1,9 @@
 Spree Recently Viewed
 =====================
 
+[![Build
+Status](https://secure.travis-ci.org/spree/spree_recently_viewed.png)](http://travis-ci.org/spree/spree_recently_viewed)
+
 This extension maintains and displays a list of the products a user has recently viewed.
 
 ### Installation
