@@ -1,8 +1,5 @@
 source "http://rubygems.org"
 
-# TODO: remove when 1.0.0 or higher is out.
-gem 'spree', :git => 'git://github.com/spree/spree.git'
-
 group :test, :developement do
   gem 'faker'
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
