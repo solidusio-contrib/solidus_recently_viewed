@@ -1,0 +1,5 @@
+"2.2.x"  => { :branch => "master" }
+"1.0.x"  => { :version => "1.0.0", :ref => "7e319edee913be3d90ececf75137cfe6bd3165d9" }
+"0.70.x" => { :branch => "0-70-stable" }
+"0.60.x" => { :branch => "0-60-stable" }
+"0.50.x" => { :branch => "0-50-stable" }
