@@ -1,31 +1,41 @@
-# Configure Rails Environment
-ENV["RAILS_ENV"] = "test"
-require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+ENV['RAILS_ENV'] = 'test'
+
+require 'simplecov'
+SimpleCov.start 'rails'
+
+require File.expand_path('../dummy/config/environment.rb', __FILE__)
+
 require 'rspec/rails'
+require 'capybara/rspec'
+require 'capybara/rails'
+require 'capybara/poltergeist'
+require 'ffaker'
+require 'database_cleaner'
 
-# Requires supporting ruby files with custom matchers and macros, etc,
-# in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
-# Requires factories defined in spree_core
-require 'spree/core/testing_support/factories'
+require 'spree/testing_support/factories'
+require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
-  config.include Spree::Core::Engine.routes.url_helpers
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
+  config.include FactoryGirl::Syntax::Methods
+  config.include Spree::TestingSupport::UrlHelpers
+
   config.use_transactional_fixtures = false
 
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
+  config.before :suite do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with :truncation
   end
 
-  config.before(:each) do
+  config.before do
+    DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
   end
 
-  config.after(:each) do
+  config.after do
     DatabaseCleaner.clean
   end
+
+  Capybara.javascript_driver = :poltergeist
 end

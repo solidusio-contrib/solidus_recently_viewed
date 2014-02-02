@@ -1,6 +1,6 @@
 *.swp
-spec/test_app
 Gemfile.lock
 .rvmrc
 spec/dummy
 .DS_Store
+coverage

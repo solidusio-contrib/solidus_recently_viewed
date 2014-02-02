@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Spree::Product do
-  before(:each) do
-    3.times { Factory(:product) }
+  before do
+    3.times { create(:product) }
   end
 
   describe "Spree::Product.find_by_array_of_ids" do

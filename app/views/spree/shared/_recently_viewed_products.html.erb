@@ -1,6 +1,6 @@
 <% if get_recently_viewed_products.any? %>
   <div id="recently_viewed" data-hook>
-    <h6 class="product-section-title"><%= t(:recently_viewed_products) %></h6>
+    <h6 class="product-section-title"><%= Spree.t(:recently_viewed_products) %></h6>
     <ul id="recently_viewed_products">
       <% get_recently_viewed_products.each do |p| %>
         <li><%= link_to p.name, p %></li>

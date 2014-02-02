@@ -1,3 +1,4 @@
 ---
 ru:
-  recently_viewed_products: "Недавно Просмотренные"
+  spree:
+    recently_viewed_products: "Недавно Просмотренные"
