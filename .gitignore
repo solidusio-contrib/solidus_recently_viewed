@@ -5,3 +5,5 @@ spec/dummy
 .DS_Store
 coverage
 .bundle
+.ruby-version
+.ruby-gemset
