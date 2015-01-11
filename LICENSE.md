@@ -1,4 +1,4 @@
-Copyright (c) 2014 Roman Smirnov, Brian Quinn and contributors
+Copyright (c) 2009-2015 Roman Smirnov, Brian Quinn and contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
