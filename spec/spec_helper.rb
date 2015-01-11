@@ -1,42 +1,27 @@
-ENV['RAILS_ENV'] = 'test'
-
 require 'simplecov'
 SimpleCov.start 'rails'
 
-require File.expand_path('../dummy/config/environment.rb', __FILE__)
+ENV['RAILS_ENV'] ||= 'test'
+
+begin
+  require File.expand_path('../dummy/config/environment', __FILE__)
+rescue LoadError
+  puts 'Could not load dummy application. Please ensure you have run `bundle exec rake test_app`'
+  exit
+end
 
 require 'rspec/rails'
-require 'capybara/rspec'
-require 'capybara/rails'
-require 'capybara/poltergeist'
 require 'ffaker'
-require 'database_cleaner'
-
-Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
-
-require 'spree/testing_support/factories'
-require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
-  config.include Spree::TestingSupport::UrlHelpers
-
   config.infer_spec_type_from_file_location!
+  config.raise_errors_for_deprecations!
   config.use_transactional_fixtures = false
+  config.mock_with :rspec
 
-  config.before :suite do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with :truncation
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
   end
-
-  config.before do
-    DatabaseCleaner.strategy = RSpec.current_example.metadata[:js] ? :truncation : :transaction
-    DatabaseCleaner.start
-  end
-
-  config.after do
-    DatabaseCleaner.clean
-  end
-
-  Capybara.javascript_driver = :poltergeist
 end
+
+Dir[File.join(File.dirname(__FILE__), '/support/**/*.rb')].each { |file| require file }
