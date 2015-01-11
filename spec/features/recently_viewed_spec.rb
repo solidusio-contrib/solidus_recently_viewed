@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-feature 'Recently Viewed Products', js: true do
+RSpec.feature 'Recently Viewed Products', :js do
   background do
     %w(Mug Shirt Jersey).each { |name| create(:product, name: "#{name}") }
   end
