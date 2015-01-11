@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.version     = '1.1.0'
   s.summary     = 'Adds recently viewed products to Spree'
   s.description = s.summary
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.1.0'
 
   s.authors     = ['Roman Smirnov', 'Brian Quinn']
   s.email       = 'brian@railsdog.com'
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_runtime_dependency 'spree_core', '~> 2.4.0.beta'
+  s.add_runtime_dependency 'spree_core', '~> 3.0.0.beta'
 
   s.add_development_dependency 'rspec-rails', '~> 2.14'
   s.add_development_dependency 'factory_girl', '~> 4.4'
