@@ -1,7 +1,13 @@
+# coding: utf-8
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
+
+require 'spree_recently_viewed/version'
+
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_recently_viewed'
-  s.version     = '1.1.0'
+  s.version     = SpreeRecentlyViewed.version
   s.summary     = 'Adds recently viewed products to Spree'
   s.description = s.summary
   s.required_ruby_version = '>= 2.1.0'
