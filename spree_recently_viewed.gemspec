@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.authors     = ['Roman Smirnov', 'Brian Quinn']
   s.email       = 'brian@railsdog.com'
-  s.license     = %q{BSD-3}
+  s.license     = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- spec/*`.split("\n")
