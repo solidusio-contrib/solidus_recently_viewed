@@ -1,8 +1,8 @@
-<% if get_recently_viewed_products.any? %>
+<% if cached_recently_viewed_products.any? %>
   <div id="recently_viewed" data-hook>
     <h6 class="product-section-title"><%= Spree.t(:recently_viewed_products) %></h6>
     <ul id="recently_viewed_products">
-      <% get_recently_viewed_products.each do |product| %>
+      <% cached_recently_viewed_products.each do |product| %>
         <li><%= link_to product.name, product %></li>
       <% end -%>
     </ul>
