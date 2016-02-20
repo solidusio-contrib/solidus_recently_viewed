@@ -1,9 +1,18 @@
 module Spree
   ProductsController.class_eval do
-    after_action :recently_viewed, only: :show
+    skip_before_action :set_current_order, only: :recently_viewed
+    after_action :save_recently_viewed, only: :recently_viewed
 
     def recently_viewed
-      id = @product.id
+      render 'spree/products/recently_viewed', layout: false
+    end
+
+    private
+
+    def save_recently_viewed
+      id = params[:product_id]
+      return unless id.present?
+
       rvp = (session['recently_viewed_products'] || '').split(', ')
       rvp.delete(id)
       rvp << id unless rvp.include?(id.to_s)
