@@ -8,10 +8,10 @@ module SpreeRecentlyViewed
   end
 
   module VERSION
-    MAJOR = 2
-    MINOR = 0
+    MAJOR = 3
+    MINOR = 1
     TINY  = 0
-    PRE   = nil
+    PRE   = 'beta'
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end

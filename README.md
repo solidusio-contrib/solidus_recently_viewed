@@ -16,6 +16,10 @@ And run bundler:
 
     bundle install
 
+And run:
+
+    bundle exec rails g spree:recently_viewed:install
+
 NOTE: No migrations are required for this extension. You're done, move along now.
 
 ---
