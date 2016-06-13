@@ -7,20 +7,27 @@ This extension maintains and displays a list of the products a user has recently
 
 ## Installation
 
-Add the following to you `Gemfile`:
-```ruby
-gem 'spree_recently_viewed', github: 'spree-contrib/spree_recently_viewed', branch: 'master'
-```
+1. Add this extension to your Gemfile with this line:
+  ```ruby
+  gem 'spree_recently_viewed', github: 'spree-contrib/spree_recently_viewed', branch: 'X-X-stable'
+  ```
 
-And run bundler:
+  The `branch` option is important: it must match the version of Spree you're using.
+  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
 
-    bundle install
+2. Install the gem using Bundler:
+  ```ruby
+  bundle install
+  ```
 
-And run:
+3. Copy & run migrations
+  ```ruby
+  bundle exec rails g spree_recently_viewed:install
+  ```
 
-    bundle exec rails g spree:recently_viewed:install
+4. Restart your server
 
-NOTE: No migrations are required for this extension. You're done, move along now.
+  If your server was running, restart it so that it can find the assets properly.
 
 ---
 
