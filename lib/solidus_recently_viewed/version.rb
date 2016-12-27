@@ -1,7 +1,7 @@
-module SpreeRecentlyViewed
+module SolidusRecentlyViewed
   module_function
 
-  # Returns the version of the currently loaded SpreeRecentlyViewed as a
+  # Returns the version of the currently loaded SolidusRecentlyViewed as a
   # <tt>Gem::Version</tt>.
   def version
     Gem::Version.new VERSION::STRING

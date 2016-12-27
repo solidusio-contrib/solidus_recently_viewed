@@ -1,8 +1,8 @@
-module SpreeRecentlyViewed
+module SolidusRecentlyViewed
   class Engine < Rails::Engine
-    require 'spree/core'
+    require 'solidus_core'
     isolate_namespace Spree
-    engine_name 'spree_recently_viewed'
+    engine_name 'solidus_recently_viewed'
 
     config.autoload_paths += %W(#{config.root}/lib)
 

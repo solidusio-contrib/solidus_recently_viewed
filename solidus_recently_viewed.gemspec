@@ -2,18 +2,18 @@
 lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
-require 'spree_recently_viewed/version'
+require 'solidus_recently_viewed/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_recently_viewed'
-  s.version     = SpreeRecentlyViewed.version
+  s.name        = 'solidus_recently_viewed'
+  s.version     = SolidusRecentlyViewed.version
   s.summary     = 'Adds recently viewed products to Spree'
   s.description = s.summary
   s.required_ruby_version = '>= 2.1.0'
 
-  s.authors     = ['Roman Smirnov', 'Brian Quinn']
-  s.email       = 'brian@railsdog.com'
+  s.authors     = ['Roman Smirnov', 'Brian Quinn', 'Allison Reilly']
+  s.email       = 'acreilly3@gmail.com'
   s.license     = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_runtime_dependency 'spree_core', '~> 3.2.0.alpha'
+  s.add_dependency "solidus_core", [">= 1.0.0", "< 3"]
 
   s.add_development_dependency 'rspec-rails', '~> 3.2.0'
   s.add_development_dependency 'factory_girl', '~> 4.4'

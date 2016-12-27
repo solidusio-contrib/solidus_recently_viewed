@@ -8,7 +8,7 @@ module Spree
         end
 
         def add_javascripts
-          append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_recently_viewed\n"
+          append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_recently_viewed\n"
         end
       end
     end
