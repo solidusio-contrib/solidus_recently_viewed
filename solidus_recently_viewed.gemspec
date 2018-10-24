@@ -23,20 +23,16 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_dependency "solidus_core", [">= 2.4.0", "< 3"]
+  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
+  s.add_dependency 'deface'
 
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'factory_girl', '~> 4.4'
-  s.add_development_dependency 'capybara', '~> 2.5'
-  s.add_development_dependency 'capybara-screenshot', '~> 1.0.11'
-  s.add_development_dependency 'poltergeist', '~> 1.6.0'
-  s.add_development_dependency 'sqlite3', '~> 1.3.10'
-  s.add_development_dependency 'simplecov', '~> 0.9.0'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'capybara-screenshot'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'sass-rails', '~> 5.0.0'
-  s.add_development_dependency 'database_cleaner', '1.4.0'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'pry-rails'
-  s.add_development_dependency 'rubocop', '>= 0.24.1'
+  s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'rubocop', '>= 0.49.0'
   s.add_development_dependency 'sprockets-rails'
+  s.add_development_dependency 'puma'
 end
