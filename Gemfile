@@ -28,7 +28,8 @@ group :development, :test do
   gem 'listen'
   gem "pry-rails"
   gem 'ffaker'
-  gem 'poltergeist'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 gemspec
