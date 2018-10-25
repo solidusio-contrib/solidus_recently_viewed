@@ -1,7 +1,6 @@
 # Solidus Recently Viewed
 
-[![Build Status](https://travis-ci.org/boomerdigital/solidus_recently_viewed.svg?branch=master)](https://travis-ci.org/boomerdigital/solidus_recently_viewed)
-[![Code Climate](https://codeclimate.com/github/boomerdigital/solidus_recently_viewed/badges/gpa.svg)](https://codeclimate.com/github/boomerdigital/solidus_recently_viewed)
+[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_recently_viewed.svg?branch=master)](https://travis-ci.org/solidusio-contrib/solidus_recently_viewed)
 
 This extension maintains and displays a list of the products a user has recently viewed.
 
