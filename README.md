@@ -28,6 +28,12 @@ This extension maintains and displays a list of the products a user has recently
 
   If your server was running, restart it so that it can find the assets properly.
 
+5. Setup frontend views
+
+  For a quick implementation you may prefer to use the included `Deface` overrides by customizing directives in [add_recently_viewed_products.rb](https://github.com/solidusio-contrib/solidus_recently_viewed/blob/master/app/overrides/add_recently_viewed_products.rb) setting `enabled: true`.
+
+  For a more fine grained implementation you can rewrite `Deface` injected partials according to needs and use them directly in views as you prefer.
+
 ---
 
 ## Contributing
