@@ -21,8 +21,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.has_rdoc = false
-
   s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
   s.add_dependency 'deface'
 
