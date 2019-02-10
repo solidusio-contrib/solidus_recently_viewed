@@ -21,8 +21,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.has_rdoc = false
-
   s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
   s.add_dependency 'deface'
 
@@ -35,4 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '>= 0.49.0'
   s.add_development_dependency 'sprockets-rails'
   s.add_development_dependency 'puma'
+  s.add_development_dependency 'sqlite3', '~> 1.3.6'
 end
