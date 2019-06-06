@@ -6,8 +6,8 @@ module SolidusRecentlyViewed
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer 'spree.recently_viewed.environment', before: :load_config_initializers do
-      Spree::RecentlyViewed::Config = Spree::RecentlyViewedSetting.new
+    initializer 'solidus_recently_viewed.environment', before: :load_config_initializers do
+      SolidusRecentlyViewed::Config = SolidusRecentlyViewed::Configuration.new
     end
 
     def self.activate
