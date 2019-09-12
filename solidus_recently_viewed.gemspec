@@ -33,5 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '>= 0.49.0'
   s.add_development_dependency 'sprockets-rails'
   s.add_development_dependency 'puma'
-  s.add_development_dependency 'sqlite3', '~> 1.3.6'
+  s.add_development_dependency 'sqlite3'
 end
