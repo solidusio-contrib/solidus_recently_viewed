@@ -1,6 +1,6 @@
 # Solidus Recently Viewed
 
-[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_recently_viewed.svg?branch=master)](https://travis-ci.org/solidusio-contrib/solidus_recently_viewed)
+[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_recently_viewed.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_recently_viewed)
 
 This extension maintains and displays a list of the products a user has recently viewed.
 
