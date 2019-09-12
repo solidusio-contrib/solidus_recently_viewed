@@ -1,8 +1,17 @@
 source 'https://rubygems.org'
 
 branch = ENV.fetch("SOLIDUS_BRANCH", "master")
+
 gem 'solidus', github: 'solidusio/solidus', branch: branch
-gem 'solidus_auth_devise', '~> 1.0'
+gem 'solidus_auth_devise'
+
+# Needed to help Bundler figure out how to resolve dependencies, otherwise it takes forever to
+# resolve them
+if branch == 'master' || Gem::Version.new(branch[1..-1]) >= Gem::Version.new('2.10.0')
+  gem 'rails', '~> 6.0'
+else
+  gem 'rails', '~> 5.0'
+end
 
 # Asset compilation speed
 gem 'mini_racer'
@@ -20,11 +29,7 @@ end
 
 group :development, :test do
   gem "rails-controller-testing"
-  if branch < "v2.5"
-    gem 'factory_bot', '4.10.0'
-  else
-    gem 'factory_bot', '> 4.10.0'
-  end
+  gem 'factory_bot', '> 4.10.0'
   gem 'listen'
   gem "pry-rails"
   gem 'ffaker'
@@ -33,4 +38,3 @@ group :development, :test do
 end
 
 gemspec
-
