@@ -19,7 +19,7 @@ gem 'sassc-rails', platforms: :mri
 
 # bourbon 5 doesn't work under sassc
 # https://github.com/thoughtbot/bourbon/issues/1047
-gem 'bourbon', '<5'
+gem 'bourbon', '<7'
 
 if ENV['DB'] == 'mysql'
   gem 'mysql2', '~> 0.4.10'
