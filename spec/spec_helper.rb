@@ -1,24 +1,21 @@
-ENV['RAILS_ENV'] ||= 'test'
+# frozen_string_literal: true
 
-begin
-  require File.expand_path('../dummy/config/environment', __FILE__)
-rescue LoadError
-  puts 'Could not load dummy application. Please ensure you have run `bundle exec rake test_app`'
-  exit
-end
+require "simplecov"
+SimpleCov.start "rails"
 
-require 'rspec/rails'
-require 'ffaker'
+ENV["RAILS_ENV"] ||= "test"
+
+require File.expand_path('dummy/config/environment.rb', __dir__)
+
+require "webdrivers"
+require "solidus_support"
+require "solidus_support/extension/feature_helper"
+
+Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.raise_errors_for_deprecations!
-  config.use_transactional_fixtures = false
-  config.mock_with :rspec
 
-  config.expect_with :rspec do |expectations|
-    expectations.syntax = :expect
-  end
+  config.example_status_persistence_file_path = "./spec/examples.txt"
 end
-
-Dir[File.join(File.dirname(__FILE__), '/support/**/*.rb')].each { |file| require file }
