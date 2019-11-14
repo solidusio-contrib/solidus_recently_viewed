@@ -21,20 +21,10 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
   s.add_dependency 'deface'
+  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
+  s.add_dependency 'sassc-rails'
+  s.add_dependency 'coffee-script'
 
-  s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'solidus_support'
-  s.add_development_dependency 'webdrivers'
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'capybara'
-  s.add_development_dependency 'capybara-screenshot'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'rubocop', '>= 0.49.0'
-  s.add_development_dependency 'sprockets-rails'
-  s.add_development_dependency 'puma'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'solidus_extension_dev_tools'
 end
