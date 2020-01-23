@@ -11,7 +11,7 @@ module SolidusRecentlyViewed
     engine_name 'solidus_recently_viewed'
 
     initializer 'spree.recently_viewed.environment', before: :load_config_initializers do
-      Spree::RecentlyViewed::Config = Spree::RecentlyViewedSetting.new
+      SolidusRecentlyViewed::Config = SolidusRecentlyViewed::Settings.new
     end
 
     def self.activate
