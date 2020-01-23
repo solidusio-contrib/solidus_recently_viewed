@@ -26,5 +26,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'sassc-rails'
   s.add_dependency 'coffee-script'
 
-  s.add_development_dependency 'solidus_extension_dev_tools'
+  s.add_development_dependency 'solidus_dev_support'
 end
