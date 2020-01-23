@@ -1,0 +1,5 @@
+bump:
+  recurse: false
+  file: 'lib/solidus_recently_viewed/version.rb'
+  message: Bump SolidusRecentlyViewed to %{version}
+  tag: true

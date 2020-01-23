@@ -1,11 +1,11 @@
-require 'spree_core'
-require 'deface'
-require 'solidus_recently_viewed/engine'
-require 'solidus_recently_viewed/version'
-require 'coffee_script'
-require 'sassc/rails'
+# frozen_string_literal: true
 
-module Spree
-  module RecentlyViewed
-  end
-end
+require 'solidus_core'
+require 'solidus_support'
+
+require 'solidus_recently_viewed/version'
+require 'solidus_recently_viewed/engine'
+
+require 'coffee_script'
+require 'deface'
+require 'sassc/rails'
