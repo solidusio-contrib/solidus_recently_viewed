@@ -1,13 +1,17 @@
+# frozen_string_literal: true
+
+require 'spree/core'
+
 module SolidusRecentlyViewed
   class Engine < Rails::Engine
-    require 'solidus_core'
-    isolate_namespace Spree
+    include SolidusSupport::EngineExtensions::Decorators
+
+    isolate_namespace ::Spree
+
     engine_name 'solidus_recently_viewed'
 
-    config.autoload_paths += %W(#{config.root}/lib)
-
     initializer 'spree.recently_viewed.environment', before: :load_config_initializers do
-      Spree::RecentlyViewed::Config = Spree::RecentlyViewedSetting.new
+      SolidusRecentlyViewed::Config = SolidusRecentlyViewed::Settings.new
     end
 
     def self.activate
@@ -18,5 +22,10 @@ module SolidusRecentlyViewed
     end
 
     config.to_prepare(&method(:activate).to_proc)
+
+    # use rspec for tests
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end
