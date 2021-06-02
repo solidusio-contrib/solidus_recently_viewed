@@ -15,8 +15,10 @@ require 'solidus_dev_support/rspec/feature_helper'
 # in spec/support/ and its subdirectories.
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
-# Requires factories defined in lib/solidus_recently_viewed/factories.rb
-require 'solidus_recently_viewed/factories'
+# This will load Solidus Core factories right before the ones defined in
+# lib/extension_name/testing_support/factories/*_factory.rb or
+# lib/extension_name/testing_support/factories.rb
+SolidusDevSupport::TestingSupport::Factories.load_for(SolidusRecentlyViewed::Engine)
 
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
