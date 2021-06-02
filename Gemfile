@@ -25,7 +25,7 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 gemspec
