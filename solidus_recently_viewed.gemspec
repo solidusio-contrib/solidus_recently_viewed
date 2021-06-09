@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Adds recently viewed products to Spree'
   s.description = s.summary
 
-  s.required_ruby_version = '~> 2.4'
+  s.required_ruby_version = '~> 2.5'
 
   s.authors     = ['Roman Smirnov', 'Brian Quinn', 'Allison Reilly']
   s.email       = 'acreilly3@gmail.com'
@@ -26,14 +26,15 @@ Gem::Specification.new do |s|
 
   if s.respond_to?(:metadata)
     s.metadata["homepage_uri"] = s.homepage if s.homepage
-    s.metadata["source_code_uri"] = s.homepage if s.homepage
+    s.metadata["source_code_uri"] = "https://github.com/solidusio-contrib/solidus_recently_viewed"
   end
 
   s.add_dependency 'coffee-script'
   s.add_dependency 'deface'
   s.add_dependency 'sassc-rails'
-  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 3']
-  s.add_dependency 'solidus_support', '~> 0.5'
+  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 4']
+  s.add_dependency 'solidus_support', '~> 0.8'
+
 
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'solidus_dev_support'
