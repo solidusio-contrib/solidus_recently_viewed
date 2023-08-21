@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Adds recently viewed products to Spree'
   s.description = s.summary
 
-  s.required_ruby_version = '~> 2.5'
+  s.required_ruby_version = '>= 2.5'
 
   s.authors     = ['Roman Smirnov', 'Brian Quinn', 'Allison Reilly']
   s.email       = 'acreilly3@gmail.com'
