@@ -32,8 +32,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-script'
   s.add_dependency 'deface'
   s.add_dependency 'sassc-rails'
-  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 4']
-  s.add_dependency 'solidus_support', '~> 0.8'
+  s.add_dependency 'solidus_core', ['>= 2.4.0', '< 5']
+  s.add_dependency 'solidus_support'
 
 
   s.add_development_dependency 'selenium-webdriver'
