@@ -1,0 +1,3 @@
+<!-- insert_after "#product_description[data-hook], [data-hook='product_description'], [data-hook='product_show']"  -->
+
+<%= render "spree/shared/add_recently_viewed_products" if Rails.env.test? %>
